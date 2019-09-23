@@ -1,0 +1,14 @@
+
+
+
+<div class="container">
+  <div><h5>Comunicados</h5></div>
+  <section>
+      <ul>
+        <div *ngFor="let comunicados of comunicados[0]; let i = index;">
+          <li  ><img src="../../../assets/images/pdf.png" alt="">{{comunicados.name}}</li><br>
+        </div>
+
+      </ul>
+  </section>
+</div>

@@ -1,0 +1,17 @@
+img{
+    height: 10rem;
+    width: 15rem;
+    margin: 0 auto;
+}
+
+.img{
+    margin: 0 auto;
+    display: inline;
+    align-content: center;
+    align-items: center;
+}
+
+section{
+    margin: 0 auto;
+    margin-top: 4rem;
+}

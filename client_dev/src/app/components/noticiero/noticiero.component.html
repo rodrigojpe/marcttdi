@@ -1,0 +1,56 @@
+
+
+
+<div class="container">
+    <div class="row col-md-12 col-lg-12">
+      <div *ngFor="let noticia of _newspaper.noticias" class="card mb-5 col-md-5 col-lg-5">
+          <img src="{{ url  + noticia.images.img_first.img_title }}"  class="card-img-top justify-content-center" >
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ noticia.title }}
+            </h5>
+            <p class="card-text text-justify">
+                {{noticia.footer}}
+            </p>
+            <p class="card-text">
+              <small class="text-muted">
+                
+              </small>
+            </p>
+            <button type="button" (click)="obtenerNoticia(noticia?.id)" data-id="noticia?.id" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalScrollable">
+                Ver más
+            </button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <!-- <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5> -->
+          <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> X
+          </button> -->
+          <h5 class="text-justify">
+             {{ _newspaper.noticias[id]?.title }}
+          </h5>
+        </div>
+        <div class="modal-body text-justify" *ngFor="let noticia of _newspaper.noticias[id]?.body | noticia" >
+            {{ noticia }}
+        </div>
+
+        <div class="d-flex justify-content-center" *ngFor="let img of _newspaper.noticias[id]?.img">
+            <img  class="img_notice" src="{{ url  + img }}" alt="...">
+            
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<div class="container">
+    <section class="contact2" id="contact">
+        <div class="row ">
+          <div class="col-lg-12">
+            <div class="card card-shadow" data-aos="fade-up" data-aos-duration="1200">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="contact-box p-40">
+                    <h4 class="title">Contact Us</h4>
+                    <form ngNativeValidate #f="ngForm" (ngSubmit)="ingresar( f )" id="loginform" required>
+                      <div class="row">
+                        
+                        <div class="col-lg-6">
+                          <div class="form-group m-t-20">
+                            <input [ngModel] name="email"  class="form-control" type="email" placeholder="email" required></div>
+                        </div>
+                       
+                        <div class="col-lg-12">
+                          <div class="form-group m-t-20">
+                            <input ngModel name="password" class="form-control" type="password" placeholder="password"></div>
+                        </div>
+                        <div class="col-lg-12"><button type="password" class="btn btn-danger-gradiant m-t-20 btn-arrow"><span>
+                              Login <i class="ti-arrow-right"></i></span></button></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="col-lg-4 bg-image" style="background-image:url(./assets/img_ttd/admin-ajax.jpg)">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+  </div>

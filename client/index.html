@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ProyectoTtd</title>
+  <base href="/">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img_ttd/favicon-16x16.png">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+  <link href="./assets/foxhover2.2.0/css/foxhover.min.css" rel="stylesheet">
+  <link href="./assets/foxhover2.2.0/css/foxhover.css" rel="stylesheet">
+
+  <link href="./assets/css/bootstrap.css" rel="stylesheet">
+  <link href="./assets/css/owl.theme.green.css" rel="stylesheet">
+  <link href="./assets/css/lightgallery.css" rel="stylesheet">
+  <link href="./assets/css/bootstrap-touch-slider.css" rel="stylesheet">
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/novi.css">
+  <link rel="stylesheet" href="./assets/fonts/flbigmugline/fl-bigmug-line.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="./assets/img_ttd/favicon-16x16.png">
+<link rel="stylesheet" href="styles.9c79fbad970af1bcb41a.css"></head>
+<body>
+  <script>
+  $(document).ready(function () {
+      $(".navbar").click(function(event) {
+        $(".navbar-collapse").collapse('hide');
+      });
+      $('.carousel').carousel();
+  }); 
+  
+  $('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
+    
+  </script>
+  <!-- Wrapkit Builder -->
+  <div id="builder"></div>
+
+  
+  <app-root></app-root>
+  
+ 
+<script type="text/javascript" src="runtime.a5dd35324ddfd942bef1.js"></script><script type="text/javascript" src="polyfills.46532d96d3286697c138.js"></script><script type="text/javascript" src="scripts.276e98af574b5d1e47be.js"></script><script type="text/javascript" src="main.73929efa4246df511151.js"></script></body>
+<script src="./assets/js/core.min.js"></script>
+<script src="./assets/js/script.js"></script>
+<script src="https://cdn.ckeditor.com/4.10.1/full/ckeditor.js"></script>
+<!-- Emmet -->
+<!-- <script src="./assets/js2/code-editor/emmet.js"></script>
+<script src="./assets/js2/code-editor/ace/ace.js"></script>
+<script src="./assets/js2/code-editor/ace/ext-emmet.js"></script>  -->
+</html>

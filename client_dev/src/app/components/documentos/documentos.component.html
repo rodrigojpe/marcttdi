@@ -1,0 +1,105 @@
+<div class="row">
+  <div class="col-md-12 col-lg-12">
+      <br><br>
+      <div class="col-md-12 col-lg-12 form-group">
+          <form action=""#formPais="ngForm">
+              <div class="col-md-6 d-inline-block">
+                    <label class="float-left">Buscar 
+                         <input type="text" class="busca" [(ngModel)]="nombreLista" name="nombreLista" > 
+                    </label>
+              </div>
+              <div class="col-md-3 d-inline-block float-left">
+                  
+              </div>
+          </form>
+      </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="contact-tab"  data-toggle="tab" href="#acta" role="tab" aria-controls="home" aria-selected="true">Acta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#convenios" role="tab" aria-controls="profile" aria-selected="false">Convenios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="contact-tab" data-toggle="tab" href="#documentos" role="tab" aria-controls="contact" aria-selected="false">Documentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#i_generales" role="tab" aria-controls="contact" aria-selected="false">Insumos Generales</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#i_grupo" role="tab" aria-controls="contact" aria-selected="false">Insumos Grupo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#j_j_restaurativa" role="tab" aria-controls="contact" aria-selected="false">Justicia Juvenil Restaurativa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="contact-tab" data-toggle="tab" href="#n_internacional" role="tab" aria-controls="contact" aria-selected="false">Normativa Internacional</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                  <br>
+                <div class="tab-pane fade show active" id="acta" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="col-md-12" *ngFor="let doc of pdfs[0] | pipe: nombreLista ">
+                         <div class="pointer" (click)="download(  doc.name , 'acta' )" name="file" ><img  class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b></div><br>   
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="convenios" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="col-md-12" *ngFor="let doc of pdfs[1] | convenios: nombreLista">
+                            <div class="pointer" (click)="download(  doc.name , 'convenios' )" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b>  </div> <br>  
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="documentos" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-md-12" *ngFor="let doc of pdfs[2] | document: nombreLista">
+                            <div class="pointer" (click)="download(  doc.name , 'documentos' )" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b>  </div> <br>  
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="i_generales" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-md-12" *ngFor="let doc of pdfs[3] | insumosG: nombreLista ">
+                            <div class="pointer" (click)="download(  doc.name , 'insumosGenerales' )" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b> </div>  <br> 
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="i_grupo" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-md-12" *ngFor="let doc of pdfs[4] | insumosG: nombreLista">
+                            <div class="pointer" (click)="download(  doc.name , 'insumosGrupo' )" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b>  </div>  <br> 
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="j_j_restaurativa" role="tabpanel" aria-labelledby="contact-tab">
+                    <div class="col-md-12" *ngFor="let doc of pdfs[5] | justiciaJ: nombreLista">
+                            <div class="pointer" (click)="download(  doc.name , 'justiciaJRestaurativa' )" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b>  </div>  <br> 
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="n_internacional" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="col-md-12" *ngFor="let doc of pdfs[6] | justiciaJ: nombreLista">
+                                <div class="pointer" (click)="download(  doc.name , 'n_internacional' )" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{doc.name}} <b> ({{doc.size}}) </b>  </div>  <br> 
+                        </div>
+                </div>
+              </div>
+              <div>
+                  <!-- <button  (click)="validarPalindromo('anna')" >  llamar funcion</button> -->
+              </div>
+
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>pdf</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let name of pdfs[0]">
+                
+                <td> <a target="_blank" href="{{ 'acta/' + name.name   | imagen  }}" download="{{name.name}}" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{name.name}} <b> ({{name.size}}) </b>  </a> </td>
+            </tr>
+            <tr *ngFor="let name of pdfs[1]">
+                
+                    <td> <a target="_blank" href="{{ 'convenios/'  + name.name | imagen }}" download="{{name.name}}" ><img class="w10" src="../../../assets/images/pdf.png" alt="">{{name.name}} <b> ({{name.size}}) </b>  </a> </td>
+                </tr>
+        </tbody>
+    </table> -->
+  </div>
+
+  <div class="col-lg-5">
+      <div class="card">
+      </div>
+  </div>
+
+</div>
