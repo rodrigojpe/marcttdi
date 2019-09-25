@@ -22,10 +22,20 @@ export class Curriculum {
             '•	Presidente de la Red Latinoamericana de Jueces, período 2015 a 2017.' +
             '•	Presidente de la Corte de Apelaciones de San Miguel, período 2008 a 2009.'
         },
-        {
-            datos_personales: 'Maria del Mar',
-            cargos_actuales: 'ahdsjaskjhdkasjdhkjasdhkad'
-        },
+         {
+            datos_personales: 'Nacio el 10 de noviembre de 1983, en Santiago de Chile, Liceo Polivalente “Guillermo Labarca H. A - 78” ' +
+                              '1998 - 2001		Especialidad Técnico en Gastronomía Fina. ' +
+                              'Abodaga desde el año 2019, Estudios Superiores en Universidad Bolivariana, la carrera de Ciencia Jurídicas' ,
+            cargos_actuales:  '• 01 de febrero de 2018: Unidad de Seguimiento de Tribunales de ' +
+                              '• Abril a octubre	2018: Práctica Profesional en la Defensoría Penal Pública, en la Unidad de Estudios ' +
+                              'y Defensoría Local San Miguel  ' +
+                              'a la fecha 	Tratamiento de Drogas y/o Alcohol (TTD) en Iltma. Corte de Apelaciones de San Miguel) ' +
+                              '• Abril de 2014 a Enero de 2018: Unidad de Apoyo a los Juzgados Civiles, ' +
+                              ' en los Juzgados A Civiles de Santiago ' +
+                              '• 20 de abril 2011 al 18 de marzo de 2014: Empresa de cobranza “COBRURA LTDA.” desempañándome' +
+                              '• Mayo de 2009 a Marzo de 2011: Segundo Juzgado del Trabajo de Santiago (no A reformado), oficial ' +
+                              'de Sala interina desempeñando '
+                              },
         {
             // tslint:disable-next-line:max-line-length
             datos_personales: 'Nacio el 12 de Agosto de 1983, en Santiago de Chile, Estudio en Colegio San Viator  y Universidad Técnologica de Chile, ' +
@@ -56,7 +66,7 @@ export class Curriculum {
             '• 2018-2019 instituto profesional DUOC UC' +
             'Actualmente me desempeño como:' +
             'Cargo: Docente a los alumnos de analistas informáticos e ingenieros de software' +
-            'Función:  Docente de las asignaturas Ingeniería de software, Programación de base de datos ' +
+            'Función:  Docente de las asignaturas Ingeniería de software, Consulta de base de datos y Programación de base de datos ' +
             'pl/sql Oracle 11g y Auditoria informática pruebas unitarias e integración '
         }
     ];

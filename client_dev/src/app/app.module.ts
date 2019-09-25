@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TtdComponent } from './components/ttd/ttd.component';
-import { NavbarComponent } from './components/shared/navbar/navbar.component';
+// import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { APP_ROUTING } from './app.router';
@@ -50,11 +50,15 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { CKEditorModule} from 'ng2-ckeditor';
 import { NoticiaPipe } from './components/pipes/noticia.pipe';
 
+// hash local estrategi
+import { HashLocationStrategy, LocationStrategy} from '@angular/common';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     TtdComponent,
-    NavbarComponent,
+    // NavbarComponent,
     FooterComponent,
     HomeComponent,
     WeComponent,
@@ -98,7 +102,8 @@ import { NoticiaPipe } from './components/pipes/noticia.pipe';
       apiKey: 'AIzaSyBW3aCDf0fYoh3B6yWW1eJ5TvxJSEBATJc'
     })
   ],
-  providers: [DocumentoService, SubirArchivoService, ContactService],
+  providers: [DocumentoService, SubirArchivoService, ContactService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

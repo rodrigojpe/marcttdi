@@ -32,22 +32,29 @@ export class SecretariaTecnicaComponent implements OnInit {
   curriculum(name) {
 
     if ( name === 'RJ' ) {
-          this.pais.push(this._cv.cv[2].datos_personales);
-          this.pais.push(this._cv.cv[2].cargos_actuales.split('•'));
+          this.pais[0].push(this._cv.cv[2].datos_personales);
+          this.pais[0].push(this._cv.cv[2].cargos_actuales.split('•'));
 
         //  console.log(this.pais);
 
-          return this.pais;
+          return this.pais[0];
     }
 
-    // if ( name === 'marimar') {
-    //       this.pais[2] = this._cv.cv[1];
-    //       this.pais[3] = this._cv.cv[1].cargos_actuales.indexOf('•');
+    if ( name === 'flaca') {
+          this.pais[1].push(this._cv.cv[1].datos_personales);
+          this.pais[1].push(this._cv.cv[1].cargos_actuales.split('•'));
+          // console.log(this._cv.cv);
+          // console.log(this._cv.cv[2].datos_personales);
+          return  this.pais[1];
+    }
 
-    //       // console.log(this._cv.cv[0].cargos_actuales.indexOf('•'));
-    //       this.obtenerCurriculums();
-    //       return this.pais;
-    // }
+    if ( name === 'fc') {
+      this.pais[2].push(this._cv.cv[0].datos_personales);
+      this.pais[2].push(this._cv.cv[0].cargos_actuales.split('•'));
+
+      // console.log(this._cv.cv[0].cargos_actuales.indexOf('•'));
+      return this.pais[2];
+}
   }
 
   obtenerCurriculums() {
