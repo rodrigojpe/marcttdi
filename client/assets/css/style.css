@@ -295,8 +295,8 @@ File: scss
 /*Normal Color*/
 /*Extra Variable*/
 /*Gradiant*/
-/******************* 
-This is the font import from the google api 
+/*******************
+This is the font import from the google api
 *******************/
 @font-face {
   font-family: 'Calafia-Regular';
@@ -310,8 +310,8 @@ This is the font import from the google api
   font-weight: normal;
   font-style: normal; }
 
-/******************* 
-Global Styles 
+/*******************
+Global Styles
 *******************/
 * {
   outline: none; }
@@ -1741,7 +1741,7 @@ Author: wrappixel
 Email: niravjoshi87@gmail.com
 File: scss
 */
-/******************* 
+/*******************
 Topbar
 *******************/
 .topbar {
@@ -1788,7 +1788,7 @@ Header 6
   .h6-nav-bar .act-buttons .btn {
     margin: 10px 0 10px 0px; } }
 
-/******************* 
+/*******************
 Main & Page wrapper
 *******************/
 .page-wrapper {
@@ -1797,20 +1797,20 @@ Main & Page wrapper
 #main-wrapper {
   overflow: hidden; }
 
-/******************* 
+/*******************
 container fluid
 *******************/
 .container-fluid {
   padding: 0px; }
 
-/******************* 
+/*******************
 footer
 *******************/
 .footer {
   padding: 20px 0;
   text-align: center; }
 
-/******************* 
+/*******************
 Fix-width
 *******************/
 .fix-width {
@@ -1819,7 +1819,7 @@ Fix-width
   margin: 0 auto;
   padding: 0 15px; }
 
-/******************* 
+/*******************
 Spacer
 *******************/
 .spacer {
@@ -1828,20 +1828,20 @@ Spacer
 .mini-spacer {
   padding: 40px 0; }
 
-/******************* 
+/*******************
 Title
 *******************/
 .title {
   margin: 20px 0 15px; }
 
-/******************* 
+/*******************
 Subtitle
 *******************/
 .subtitle {
   color: #8d97ad;
   line-height: 24px; }
 
-/******************* 
+/*******************
 card
 *******************/
 .card {
@@ -1855,7 +1855,7 @@ card
   border: 1px solid rgba(120, 130, 140, 0.13);
   margin-bottom: 30px; }
 
-/******************* 
+/*******************
 Icon space
 *******************/
 .icon-space {
@@ -1874,7 +1874,7 @@ Icon space
     .linking:hover i {
       margin-left: 15px; }
 
-/******************* 
+/*******************
 Listing
 *******************/
 .list-block {
@@ -1895,7 +1895,7 @@ Listing
     border-bottom: 1px solid rgba(120, 130, 140, 0.13);
     padding: 15px 0; }
 
-/******************* 
+/*******************
 Listing
 *******************/
 .img-inline {
@@ -1908,14 +1908,14 @@ Listing
       display: inline-block;
       vertical-align: top; }
 
-/******************* 
+/*******************
 Image shadow
 *******************/
 .img-shadow {
   -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.3);
   box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.3); }
 
-/******************* 
+/*******************
 Image shadow
 *******************/
 .icon-round {
@@ -1929,7 +1929,7 @@ Image shadow
   -ms-flex-negative: 0;
   flex-shrink: 0; }
 
-/******************* 
+/*******************
 up section
 *******************/
 .up {
@@ -1959,26 +1959,26 @@ up section
   .ui-to-top:hover, .ui-to-top:focus {
     color: #ffffff; }
 
-/******************* 
+/*******************
 both space
 *******************/
 .both-space {
   margin: 80px 0; }
 
-/******************* 
+/*******************
 Side text content
 *******************/
 .side-content {
   padding: 40px 60px; }
 
-/******************* 
+/*******************
 background cover
 *******************/
 .bg-cover {
   background-size: cover;
   min-height: 200px; }
 
-/******************* 
+/*******************
 Owl carousel
 *******************/
 .owl-carousel {
@@ -1994,7 +1994,7 @@ Owl carousel
   .owl-carousel .owl-nav.disabled {
     display: none; }
 
-/******************* 
+/*******************
 Max width
 *******************/
 .max-300 {
@@ -2009,7 +2009,7 @@ Max width
 .max-600 {
   max-width: 600px; }
 
-/******************* 
+/*******************
 line sticks
 *******************/
 .stick-bottom {
@@ -2023,7 +2023,7 @@ line sticks
     left: 0px;
     display: inline-block; }
 
-/******************* 
+/*******************
 position
 *******************/
 .po-absolute {
@@ -2501,7 +2501,7 @@ Timeline page
 .timeline-body > p + p {
   margin-top: 5px; }
 
-/*============================================================== 
+/*==============================================================
  Ui-bootstrap
  ============================================================== */
 ul.list-icons {
@@ -2558,7 +2558,7 @@ html body .accordion .card {
   #accordion4 .card.active .card-header a {
     color: #ffffff; }
 
-/*===================== 
+/*=====================
 Breadcrumb
 =====================*/
 .bc-colored .breadcrumb-item,
@@ -2623,7 +2623,7 @@ Breadcrumb
   background: #1dc8cd;
   border-color: #1dc8cd; }
 
-/*============================================================== 
+/*==============================================================
  Cards page
  ============================================================== */
 .card-columns .card {
@@ -6306,7 +6306,7 @@ slide 4
     font-size: 23px;
     line-height: 30px; }
   .slider4 .slide-image {
-    left: -90%;
+    /* left: -90%; */
     height: 380px; }
   .slider4 .btn-md {
     text-align: center;
@@ -6920,14 +6920,14 @@ Author: Themedesigner
 Email: niravjoshi87@gmail.com
 File: scss
 */
-/*============================================================== 
- For Laptop & above all (1650px) 
+/*==============================================================
+ For Laptop & above all (1650px)
  ============================================================== */
-/*============================================================== 
- For Laptop & above all (1370px) 
+/*==============================================================
+ For Laptop & above all (1370px)
  ============================================================== */
-/*-- ============================================================== 
- Small Desktop & above all (1024px) 
+/*-- ==============================================================
+ Small Desktop & above all (1024px)
  ============================================================== */
 @media (min-width: 1024px) {
   .contact4 .contact-box {
@@ -6996,11 +6996,11 @@ File: scss
         -webkit-animation-name: none;
         animation-name: none; } }
 
-/*-- ============================================================== 
- Ipad & above all(768px) 
+/*-- ==============================================================
+ Ipad & above all(768px)
  ============================================================== */
-/*-- ============================================================== 
- Phone and below ipad(767px) 
+/*-- ==============================================================
+ Phone and below ipad(767px)
  ============================================================== */
 @media (max-width: 767px) {
   /*This is for the Global*/
