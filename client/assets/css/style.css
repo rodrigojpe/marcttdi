@@ -6306,7 +6306,7 @@ slide 4
     font-size: 23px;
     line-height: 30px; }
   .slider4 .slide-image {
-    /* left: -90%; */
+    left: -90%;
     height: 380px; }
   .slider4 .btn-md {
     text-align: center;
