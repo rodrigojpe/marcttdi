@@ -12,14 +12,14 @@ const nodemailer = require('nodemailer');
 
 app.post('/send', (req, res) =>{
     console.log('contact servce in background');
-    
+
     // sendMail = async (req, res) => {
     // Generate test SMTP service account from ethereal.email
     // Only needed if you don't have a real mail account for testing
-    
+
     // console.log(req.body.contact.nombre);
 
-    
+
     var datetime = new Date();
     console.log(datetime.toISOString().slice(0,10));
     // return false;
@@ -29,7 +29,7 @@ app.post('/send', (req, res) =>{
         email:req.body.contact.correo,
         message:req.body.contact.mensaje
       });
-    
+
       var acount = {
         user : 'academiacp@gmail.com',
         pass: 'martinrodrigo1'
@@ -44,17 +44,17 @@ app.post('/send', (req, res) =>{
             pass: 'martinrodrigo1'
         }
       }
-    
+
      let transporter = nodemailer.createTransport({
-    
+
        service: 'Gmail',
        auth:{
          user: 'academiacp@gmail.com',
          pass: 'martinrodrigo1'
        }
      });
-    
-    
+
+
     // console.log('sen email');
         var img = __dirname+"/logo.jpg";
         var mailOptions = {
@@ -67,7 +67,7 @@ app.post('/send', (req, res) =>{
                 '<style>img { width:10; height:7;}</style><img width="300px" height="260px" src="cid:logo"/>'+ '<p></p>'+
                 '<div><p><h1> Mensaje :'+ contact.message + '</h1></p></div></br> '+
                 '<p>Mi correo es :' +contact.email+' </p></br>',// html body
-    
+
                 attachments:[
                   {
                     filename:'logo.jpg',
@@ -76,31 +76,31 @@ app.post('/send', (req, res) =>{
                   },
                 ]
         };
-    
+
         // send mail with defined transport object
-        
+
         transporter.sendMail(mailOptions, (error, info) => {
           console.log('sen email 2');
           console.log(error);
-          
-          
+
+
           // return;
           if (error) {
             console.log(error);
             console.log(error);
           }
-          
+
           res.status(200).send({ contact: JSON.stringify(contact) });
-    
-    
+
+
             // console.log('Message sent: %s', info.messageId);
             // // Preview only available when sending through an Ethereal account
             // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-    
+
             // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
             // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
         });
-    
+
     // };
 });
 
